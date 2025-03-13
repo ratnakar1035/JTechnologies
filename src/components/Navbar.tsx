@@ -2,6 +2,7 @@ import { Box, Flex, Image, Button, useColorModeValue, Stack, useColorMode, IconB
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link } from 'react-scroll';
 import { motion, Variants } from 'framer-motion';
+import { getImagePath } from '../utils/paths';
 
 const navVariants: Variants = {
   hidden: { y: -100 },
@@ -59,10 +60,10 @@ export default function Navbar() {
         <Link to="home" smooth={true} duration={500} offset={-64}>
           <Flex alignItems="center" cursor="pointer">
             <Image
+              src={getImagePath('/logo.png')}
+              alt="J Technologies Logo"
               height="40px"
-              src="/src/assets/logo.png"
-              alt="Company Logo"
-              fallbackSrc="https://via.placeholder.com/40"
+              objectFit="contain"
             />
           </Flex>
         </Link>

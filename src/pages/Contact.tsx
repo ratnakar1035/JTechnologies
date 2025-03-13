@@ -45,15 +45,15 @@ export default function Contact() {
   const EMAIL_SERVICE_ID = 'YOUR_EMAIL_SERVICE_ID';
   const EMAIL_TEMPLATE_ID = 'YOUR_EMAIL_TEMPLATE_ID';
   const EMAIL_PUBLIC_KEY = 'YOUR_EMAIL_PUBLIC_KEY';
-  const WHATSAPP_NUMBER = '919951881035'; // Replace with your WhatsApp number
+  const WHATSAPP_NUMBER = '9966754777'; // Replace with your WhatsApp number
   const EMAIL_ID = 'your.email@gmail.com'; // Replace with your email
 
   const contactInfo: ContactInfo[] = [
     {
       icon: FaPhone,
       title: 'Phone',
-      details: '+91 98765 43210',
-      link: 'tel:+919876543210',
+      details: '+91-9966754777',
+      link: 'tel:+919966754777',
       delay: 0.2,
     },
     {
@@ -66,7 +66,7 @@ export default function Contact() {
     {
       icon: FaMapMarkerAlt,
       title: 'Address',
-      details: '123 Business Street, City, State, India - PIN',
+      details: 'Poranki Center, Andhra Pradesh, India',
       delay: 0.6,
     },
   ];
