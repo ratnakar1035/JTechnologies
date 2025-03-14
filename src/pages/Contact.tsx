@@ -42,11 +42,11 @@ export default function Contact() {
   });
 
   // Replace these with your actual values
-  const EMAIL_SERVICE_ID = 'YOUR_EMAIL_SERVICE_ID';
-  const EMAIL_TEMPLATE_ID = 'YOUR_EMAIL_TEMPLATE_ID';
-  const EMAIL_PUBLIC_KEY = 'YOUR_EMAIL_PUBLIC_KEY';
+  const EMAIL_SERVICE_ID = 'service_769gfmt';
+  const EMAIL_TEMPLATE_ID = 'template_w50flb4';
+  const EMAIL_PUBLIC_KEY = 'mNZMSZf0yMn8SeoVm';
   const WHATSAPP_NUMBER = '9966754777'; // Replace with your WhatsApp number
-  const EMAIL_ID = 'your.email@gmail.com'; // Replace with your email
+  const EMAIL_ID = 'ratnakar9010@gmail.com'; // Replace with your email
 
   const contactInfo: ContactInfo[] = [
     {
@@ -151,24 +151,24 @@ export default function Contact() {
     setIsLoading(true);
 
     try {
-      // Send email using EmailJS
-    //   await emailjs.send(
-    //     EMAIL_SERVICE_ID,
-    //     EMAIL_TEMPLATE_ID,
-    //     {
-    //       from_name: formData.name,
-    //       from_email: formData.email,
-    //       phone_number: formData.phone,
-    //       subject: formData.subject,
-    //       message: formData.message,
-    //     },
-    //     EMAIL_PUBLIC_KEY
-    //   );
+    //   Send email using EmailJS
+      await emailjs.send(
+        EMAIL_SERVICE_ID,
+        EMAIL_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_mail: formData.email,
+          phone_number: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        EMAIL_PUBLIC_KEY
+      );
 
       // Send WhatsApp message
-      const whatsappMessage = `New Contact Form Submission:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\nMessage: ${formData.message}`;
-      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
-      window.open(whatsappUrl, '_blank');
+    //   const whatsappMessage = `New Contact Form Submission:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\nMessage: ${formData.message}`;
+    //   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+    //   window.open(whatsappUrl, '_blank');
 
       toast({
         title: 'Success',
